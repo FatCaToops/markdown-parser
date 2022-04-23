@@ -1,9 +1,6 @@
 # Title
 
-[Link][1]
-⋮
-[1]:https://something.com
+[a link!](https://something.com)
+[another link!](some-page.html)
 
-[Link][2]
-⋮
-[2]:https://some-thing.html
+some paragraph text after the links
