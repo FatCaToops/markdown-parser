@@ -2,7 +2,8 @@
 
 [Link][1]
 ⋮
-[1]: https://something.com
+[1]:https://something.com
+
 [Link][2]
 ⋮
-[2]: some-thing.html
+[2]:https://some-thing.html
