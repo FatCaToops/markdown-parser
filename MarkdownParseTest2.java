@@ -44,7 +44,7 @@ public class MarkdownParseTest2 {
         Path filename4 = Path.of("test-file33.md");
         String content4 = Files.readString(filename4);
         ArrayList<String> links4 = MarkdownParse.getLinks(content4);
-        assertEquals(List.of("https://something.co"), 
+        assertEquals(List.of("https://something.com"), 
                     links4);
     }
 }
