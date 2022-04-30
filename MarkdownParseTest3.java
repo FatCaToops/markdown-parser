@@ -42,11 +42,15 @@ public class MarkdownParseTest3 {
         ArrayList<String> links4 = MarkdownParse.getLinks(content4);
         assertEquals(List.of("https://something.com"), 
                     links4);
+    }
 
+    @Test
+    public void testgetLink2() throws IOException{
         Path filename3 = Path.of("test-file22.md");
         String content3 = Files.readString(filename3);
         ArrayList<String> links3 = MarkdownParse.getLinks(content3);
         assertEquals(List.of("https://something.com", "https://some-thing.html"), 
                     links3);
     }
+
 }
