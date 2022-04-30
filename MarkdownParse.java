@@ -29,21 +29,30 @@ public class MarkdownParse {
                 currentIndex = closeParen + 1;
             }
         }
-        // there is image
+        // there is image or ! between bracket
         else if(markdown.indexOf("!") > 0){
             //System.out.println("2");
-            while(currentIndex < markdown.length()) {
-                int exclamation = markdown.indexOf("!", currentIndex);
-                int openBracket = markdown.indexOf("[", currentIndex);
-                int closeBracket = markdown.indexOf("]", openBracket);
-                int openParen = markdown.indexOf("(", closeBracket);
-                int closeParen = markdown.indexOf(")", openParen);
+            int exclamation = markdown.indexOf("!", currentIndex);
+            int openBracket = markdown.indexOf("[", currentIndex);
+            int closeBracket = markdown.indexOf("]", openBracket);
+            //! between bracket
+            if(exclamation > openBracket && exclamation < closeBracket){
+                while(currentIndex < markdown.length()) {
+                    exclamation = markdown.indexOf("!", currentIndex);
+                    openBracket = markdown.indexOf("[", currentIndex);
+                    closeBracket = markdown.indexOf("]", openBracket);
+                    int openParen = markdown.indexOf("(", closeBracket);
+                    int closeParen = markdown.indexOf(")", openParen);
 
-                if(exclamation > openBracket){
-                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                    if(exclamation > openBracket && openBracket > 0){
+                        toReturn.add(markdown.substring(openParen + 1, closeParen));
+                    }
+                    else{
+                        break;
+                    }
+                    currentIndex = closeParen + 1;
+                    //just skip this image link
                 }
-                currentIndex = closeParen + 1;
-                //just skip this image link
             }
         }
         //another way of using internet link

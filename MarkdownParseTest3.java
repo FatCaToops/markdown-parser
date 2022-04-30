@@ -37,20 +37,20 @@ public class MarkdownParseTest3 {
 
 
 
-        Path filename4 = Path.of("test-file33.md");
+        /* Path filename4 = Path.of("test-file33.md");
         String content4 = Files.readString(filename4);
         ArrayList<String> links4 = MarkdownParse.getLinks(content4);
         assertEquals(List.of("https://something.com"), 
-                    links4);
+                    links4); */
     }
 
     @Test
     public void testgetLink2() throws IOException{
-        Path filename3 = Path.of("test-file22.md");
-        String content3 = Files.readString(filename3);
-        ArrayList<String> links3 = MarkdownParse.getLinks(content3);
-        assertEquals(List.of("https://something.com", "https://some-thing.html"), 
-                    links3);
+        Path filename2 = Path.of("test-file2.md");
+        String content2 = Files.readString(filename2);
+        ArrayList<String> links2 = MarkdownParse.getLinks(content2);
+        assertEquals(List.of("https://something.com", "some-page.html"), 
+                    links2);
     }
 
 }
