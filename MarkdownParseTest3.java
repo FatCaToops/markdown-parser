@@ -15,7 +15,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 
-public class MarkdownParseTest2 {
+public class MarkdownParseTest3 {
     @Test
     public void addition() {
         assertEquals(2, 1 + 1); 
