@@ -35,16 +35,18 @@ public class MarkdownParseTest3 {
         assertEquals(List.of(), 
                     links2);
 
-        /*Path filename3 = Path.of("test-file22.md");
-        String content3 = Files.readString(filename3);
-        ArrayList<String> links3 = MarkdownParse.getLinks(content3);
-        assertEquals(List.of("https://something.com", "https://some-thing.html"), 
-                    links3);*/
+
 
         Path filename4 = Path.of("test-file33.md");
         String content4 = Files.readString(filename4);
         ArrayList<String> links4 = MarkdownParse.getLinks(content4);
         assertEquals(List.of("https://something.com"), 
                     links4);
+
+        Path filename3 = Path.of("test-file22.md");
+        String content3 = Files.readString(filename3);
+        ArrayList<String> links3 = MarkdownParse.getLinks(content3);
+        assertEquals(List.of("https://something.com", "https://some-thing.html"), 
+                    links3);
     }
 }
