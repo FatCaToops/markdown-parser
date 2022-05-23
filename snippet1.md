@@ -5,5 +5,3 @@
 [`cod[e`](google.com)
 
 [`code]`](ucsd.edu)
-
-[link](www.google.com)

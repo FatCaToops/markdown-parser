@@ -43,13 +43,5 @@ public class MarkdownParseTest3 {
         ArrayList<String> links2 = MarkdownParse.getLinks(content2);
         assertEquals(List.of(), 
                     links2);
-
-
-
-        /* Path filename4 = Path.of("test-file33.md");
-        String content4 = Files.readString(filename4);
-        ArrayList<String> links4 = MarkdownParse.getLinks(content4);
-        assertEquals(List.of("https://something.com"), 
-                    links4); */
     }
 }
